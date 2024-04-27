@@ -45,6 +45,9 @@ setInterval(() => {
     let currentdate = new Date();
     // hours 
     let z = currentdate.getHours()
+    if (z < 12) {
+        hours = hours - 12;
+    }
     //ampm
     a.innerHTML = z;
     if (z >= 12) {
