@@ -45,14 +45,15 @@ setInterval(() => {
     let currentdate = new Date();
     // hours 
     let z = currentdate.getHours()
-    if (z < 12) {
-        hours = hours - 12;
+    if (z > 12) {
+        hours = z - 12;
+    } else {
+        hours = "";
     }
+    a.innerHTML = hours, z;
     //ampm
-    a.innerHTML = z;
     if (z >= 12) {
         ampm = "PM"
-        console.log(ampm);
     }
     else {
         ampm = "AM"
