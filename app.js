@@ -27,6 +27,7 @@ let b = document.getElementById("minus")
 let c = document.getElementById("ampm")
 let e = document.getElementById("zero")
 let d = document.getElementById("seconds")
+let zero6 = document.getElementById("zero5")
 
 // let f = document.getElementById("zero")
 // second part date 
@@ -40,7 +41,7 @@ let t = document.getElementById("zero4")
 
 setInterval(() => {
 
-    // past time
+    // past timey
     // currentdate 
     let currentdate = new Date();
     // hours 
@@ -48,7 +49,7 @@ setInterval(() => {
     if (z > 12) {
         hours = z - 12;
     } else {
-        hours = "";
+        hours = z;
     }
     a.innerHTML = hours, z;
     //ampm
@@ -62,12 +63,15 @@ setInterval(() => {
     let r = currentdate.getMinutes();
     b.innerHTML = r;
     if (r < 10) {
-        l.innerHTML = z;
+        zero6.innerHTML = "0"
+    }
+    if (z < 10) {
+        // l.innerHTML = z;
         heno = "0"
     } else {
         heno = "";
     }
-    zero2.innerHTML = heno;
+    l.innerHTML = heno;
     // seconds 
     let x = currentdate.getSeconds();
     d.innerHTML = x;
